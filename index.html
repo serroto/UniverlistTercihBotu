@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tercih Botu Demo</title>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@200&family=Quicksand&display=swap');
+  </style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.1/jquery.twbsPagination.min.js"></script>
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.4/simplePagination.min.css">
+  <script type="text/javascript" rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.4/jquery.simplePagination.min.js"></script> -->
+
+  
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <section id="main-section">
+    <!--Split left start-->
+    <div id="left-page">
+      <div class="container paddingless">
+
+        <div class="bar__module hidden-xs">
+          <span id="powered-by">Powered by</span>
+          <a href="https://univerlist.com/tr/" target="_blank" style="display:grid; padding: 6px 16px;"><img
+              alt="Univerlist website logosu" class="logo logo-dark lozad" height="24px" src="images/logo-son.png"
+              width="160px" data-loaded="true"></a>
+            </div>
+
+        <div class="col-md-12">
+          <div class="scrolls">
+            <div id="cities" style="cursor:pointer;">
+              <select id="sehirler" class="js-example-placeholder-multiple js-states form-control" multiple="multiple">
+                <!-- JQuery data -->
+              </select>
+            </div>
+            <div id="universities">
+              <select id="uniler" class="js-example-placeholder-multiple js-states form-control" multiple="multiple">
+              </select>
+            </div>
+            <div id="departments">
+              <select id="bolumler" class="js-example-placeholder-multiple js-states form-control" multiple="multiple">
+              </select>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container filters paddingless accordion" id="accordionPanelsStayOpenExample">
+        <div class="col-md-12">
+          <h3 class="h3-tercih-tipi">
+            Tercih Tipi
+          </h3>
+          <div id="tercih-tipi" class="round">
+            <div class="accordion-body">
+
+              <div class="custom-control custom-checkbox">
+                <input class="tn custom-control-input" type="checkbox" id="tyt" value="TYT">
+                <label class="custom-control-label" for="tyt">TYT</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input class="tn custom-control-input" type="checkbox" id="sayısal" value="SAY">
+                <label class="custom-control-label" for="sayısal">Sayısal</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input class="tn custom-control-input" type="checkbox" id="tm" value="EA">
+                <label class="custom-control-label" for="tm">Eşit Ağırlık</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input class="tn custom-control-input" type="checkbox" id="sozel" value="SÖZ">
+                <label class="custom-control-label" for="sozel">Sözel</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input class="tn custom-control-input" type="checkbox" id="dil" value="DİL">
+                <label class="custom-control-label" for="dil">Dil</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12 accordion-item">
+          <h3 class="h3-tercih-tipi">
+            Eğitim Türü
+          </h3>
+          <div id="egitim-turu" class="round">
+            <div class="accordion-body">
+
+              <div class="custom-control custom-checkbox">
+                <input class="ut custom-control-input" type="checkbox" id="vakıf" value="1">
+                <label class="custom-control-label" for="vakıf">Vakıf</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input class="ut custom-control-input" type="checkbox" id="devlet" value="2">
+                <label class="custom-control-label" for="devlet">Devlet</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12 accordion-item">
+          <h3 class="accordion-header" id="panelsStayOpen-headingSeven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#sıralama-aralıgı" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
+              Sıralama Aralığı
+            </button>
+          </h3>
+          <div id="sıralama-aralıgı" class="round aralık accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingSeven">
+            <div class="accordion-body marginless">
+              <input id="lm" class="form-control form-control-sm aralık-form" type="text" placeholder="Taban sıralama">
+              <!--lm-->
+              <input id="hm" class="form-control form-control-sm aralık-form" type="text" placeholder="Tavan sıralama">
+              <!--hm-->
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12 accordion-item">
+          <h3 class="accordion-header" id="panelsStayOpen-headingEight">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#puan-aralıgı" aria-expanded="false" aria-controls="panelsStayOpen-collapseEight">
+              Puan Aralığı
+            </button>
+          </h3>
+          <div id="puan-aralıgı" class="round aralık accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingEight">
+            <input id="lo" class="form-control form-control-sm aralık-form" type="text" placeholder="Taban puan">
+            <!--lo-->
+            <input id="ho" class="form-control form-control-sm aralık-form" type="text" placeholder="Tavan puan">
+            <!--ho-->
+          </div>
+        </div>
+
+        <div class="col-md-12 accordion-item">
+          <h3 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#burslar"
+              aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+              Burslar
+            </button>
+          </h3>
+          <div id="burslar" class="round accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+            <div class="accordion-body">
+              <div class="custom-control custom-checkbox">
+                <input class="s custom-control-input" type="checkbox" id="ücretli" value="5">
+                <label class="custom-control-label" for="ücretli">Ücretli</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input class="s custom-control-input" type="checkbox" id="25" value="1">
+                <label class="custom-control-label" for="25">%25</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input class="s custom-control-input" type="checkbox" id="50" value="2">
+                <label class="custom-control-label" for="50">%50</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input class="s custom-control-input" type="checkbox" id="75" value="3">
+                <label class="custom-control-label" for="75">%75</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input class="s custom-control-input" type="checkbox" id="100" value="4">
+                <label class="custom-control-label" for="75">%100</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12 accordion-item">
+          <h3 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#egitim-dili" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+              Eğitim Dili
+            </button>
+          </h3>
+          <div id="egitim-dili" class="round accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+            <div class="accordion-body">
+              <div class="custom-control custom-checkbox">
+                <input class="lang custom-control-input" type="checkbox" id="tr" value="2">
+                <label class="custom-control-label" for="tr">Türkçe</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input class="lang custom-control-input" type="checkbox" id="en" value="1">
+                <label class="custom-control-label" for="en">İngilizce</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input class="lang custom-control-input" type="checkbox" id="fr" value="3">
+                <label class="custom-control-label" for="fr">Fransızca</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input class="lang custom-control-input" type="checkbox" id="rs" value="5">
+                <label class="custom-control-label" for="rs">Rusça</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input class="lang custom-control-input" type="checkbox" id="rs" value="5">
+                <label class="custom-control-label" for="rs">Rusça</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input class="lang custom-control-input" type="checkbox" id="gr" value="12">
+                <label class="custom-control-label" for="gr">Almanca</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input class="lang custom-control-input" type="checkbox" id="ar" value="13">
+                <label class="custom-control-label" for="ar">Arapça</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input class="lang custom-control-input" type="checkbox" id="en-30" value="34">
+                <label class="custom-control-label" for="en-30">30% İngilizce</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input class="lang custom-control-input" type="checkbox" id="fr-30" value="33">
+                <label class="custom-control-label" for="fr-30">30% Fransızca</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input class="lang custom-control-input" type="checkbox" id="gr-30" value="35">
+                <label class="custom-control-label" for="gr-30">30% Almanca</label>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12  accordion-item">
+          <h3 class="accordion-header" id="panelsStayOpen-headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#bolum-turu" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+              Bölüm Türü
+            </button>
+          </h3>
+          <div id="bolum-turu" class="round accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+            <div class="accordion-body">
+
+              <div class="custom-control custom-checkbox">
+                <input class="dep-type custom-control-input" type="checkbox" id="io">
+                <label class="custom-control-label" for="io">İÖ</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input class="dep-type custom-control-input" type="checkbox" id="kktc">
+                <label class="custom-control-label" for="kktc">KKTC</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input class="dep-type custom-control-input" type="checkbox" id="mtok">
+                <label class="custom-control-label" for="mtok">M.T.O.K</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12 accordion-item">
+          <h3 class="accordion-header" id="panelsStayOpen-headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#egıtım-suresı" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+              Eğitim Süresi
+            </button>
+          </h3>
+          <div id="egıtım-suresı" class="round accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSix">
+            <div class="accordion-body">
+              <div class="custom-control custom-checkbox">
+                <input class="y custom-control-input" type="checkbox" id="on-lisans" value="2">
+                <label class="custom-control-label" for="on-lisans">Ön Lisans</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input class="y custom-control-input" type="checkbox" id="lisans" value="4">
+                <label class="custom-control-label" for="lisans">Lisans</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- bottom buttons -->
+      <div class="show-result-btns d-none">
+        <button id="ara-btn" class="button-77" role="button" onclick="araBtn()">Ara</button>
+        <button class="button-77" role="button" onclick="resetBtn()">Sıfırla</button>
+      </div>
+
+    </div> <!-- Split left end -->
+
+    <!-- Split right start -->
+    <div id="right-page">
+      <!-- Navbar start-->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="https://univerlist.com/tr/universiteler/" target="_blank" rel="noreferer">Üniversite Arat</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://univerlist.com/tr/karsilastir/" target="_blank" rel="noreferer">Üniversite Karşılaştır</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://univerlist.com/tr/bolumler/" target="_blank" rel="noreferer">Bölüm Arat</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+      <div class="seo-div">
+        <h1>2022 YKS Tercih Botu</h1>
+        <h2>Güncel üniversite taban puanları ve başarı sıralamalarına ulaş!</h2>
+      </div>
+
+
+      <!--Table start-->
+      <div class="table-container">
+        <div class="row">
+          <div class="col-md-12 margin-top-20">
+            <div>
+              <table id="mytable" class="border--round table--alternate-row"
+                style="padding-top: 20px; padding-bottom: 10px;">
+                <thead class="thead-sticky">
+                  <tr>
+                    <th rowspan="2" class="text-center">Üniversite Adı</th>
+                    <th rowspan="2" class="text-center">Bölüm Adı</th>
+                    <th colspan="2" class="text-center">Taban Puan</th>
+                    <th colspan="2" class="text-center">Başarı Sırası</th>
+                    <th rowspan="2" class="text-center" style="width:91px">Puan Türü</th>
+                    <th rowspan="2" class="text-center" style="width:100px">Dil</th>
+                    <th colspan="2" class="text-center">Kontenjanlar</th>
+                  </tr>
+                  <tr>
+                    <th class="text-center">2021</th>
+                    <th class="text-center">2020</th>
+                    <th class="text-center">2021</th>
+                    <th class="text-center">2020</th>
+                    <th class="text-center">2021 <span class="small-tag">Genel</span></th>
+                    <th class="text-center">2021 <span class="small-tag">Yerleşen</span></th>
+                  </tr>
+                </thead>
+
+                <tbody class="table-body">
+                  <!-- JQuery data -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="w-100 d-flex justify-content-center"><span class="font-weight-600">**Tercih listesi tavsiye
+              amaçlıdır. Tercihlerinizi kesinleştirmeden önce lütfen ÖSYM verilerini kontrol ediniz.</span></div>
+          <div class="w-100 d-flex justify-content-center" style="margin-top: 24px;">
+            <div styl="padding:0" class="col-md-8"><span class="font-weight-600">**Univerlist ücretler üzerine hiçbir
+                sorumluluk kabul etmez. Tercihlerinizde yanlışlık olmaması adına lütfen üniversitelerin web sitesinden
+                ve 2021 YKS kılavuzundan tekrar kontrol ediniz.</span></div>
+          </div>
+          <!-- <div class="paginations">
+            <div class="VuePagination " limit="5">
+              <nav class="">
+                <ul class="pagination VuePagination__pagination">
+                  <li
+                    class="VuePagination__pagination-item page-item  VuePagination__pagination-item-prev-chunk disabled">
+                    <a href="javascript:void(0);" disabled="disabled" class="page-link">&lt;&lt;</a></li>
+                  <li
+                    class="VuePagination__pagination-item page-item  VuePagination__pagination-item-prev-page disabled">
+                    <a href="javascript:void(0);" disabled="disabled" class="page-link">&lt;</a></li>
+                  <li class="VuePagination__pagination-item page-item"><a href="javascript:void(0)"
+                      class="page-link active" role="button">1</a></li>
+                  <li class="VuePagination__pagination-item page-item "><a href="javascript:void(0)" class="page-link "
+                      role="button">2</a></li>
+                  <li class="VuePagination__pagination-item page-item "><a href="javascript:void(0)" role="button"
+                      class="page-link ">3</a></li>
+                  <li class="VuePagination__pagination-item page-item "><a href="javascript:void(0)" role="button"
+                      class="page-link ">4</a></li>
+                  <li class="VuePagination__pagination-item page-item "><a href="javascript:void(0)" role="button"
+                      class="page-link ">5</a></li>
+                  <li class="VuePagination__pagination-item page-item "><a href="javascript:void(0)" role="button"
+                      class="page-link ">6</a></li>
+                  <li class="VuePagination__pagination-item page-item "><a href="javascript:void(0)" role="button"
+                      class="page-link ">7</a></li>
+                  <li class="VuePagination__pagination-item page-item "><a href="javascript:void(0)" role="button"
+                      class="page-link ">8</a></li>
+                  <li class="VuePagination__pagination-item page-item "><a href="javascript:void(0)" role="button"
+                      class="page-link ">9</a></li>
+                  <li class="VuePagination__pagination-item page-item "><a href="javascript:void(0)" role="button"
+                      class="page-link ">10</a></li>
+                  <li class="VuePagination__pagination-item page-item  VuePagination__pagination-item-next-page "><a
+                      href="javascript:void(0);" class="page-link">&gt;</a></li>
+                  <li class="VuePagination__pagination-item page-item  VuePagination__pagination-item-next-chunk "><a
+                      href="javascript:void(0);" class="page-link">&gt;&gt;</a></li>
+                </ul>
+                <p class="VuePagination__count " style="">Toplam 20,845 bölüm</p>
+              </nav>
+            </div>
+          </div> -->
+          <ul id="pagination-demo" class="pagination-sm"></ul>
+      </div>
+        </div>
+      </div>
+
+    </div> <!-- Split right end -->
+
+  </section> <!-- Main section end -->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <script src="index.js" charset="utf-8"></script>
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-dropdown/2.0.3/jquery.dropdown.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dropdown/2.0.3/jquery.dropdown.js"></script>
+</body>
+
+</html>
