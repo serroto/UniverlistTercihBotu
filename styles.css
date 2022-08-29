@@ -596,13 +596,6 @@ svg {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%233b444b' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E")!important;
 }
 
-/* @media (min-width: 990px) {
-    a {
-        padding: 6px 16px;
-        border-radius: 4px;
-    }
-} */
-
 .select2-container .select2-search--inline .select2-search__field {
     padding-left: 13px!important;
 }
