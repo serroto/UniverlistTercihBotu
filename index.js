@@ -78,10 +78,10 @@ function onSuccessRes(jsonReturn){
     let slug = element.university.slug;
 
     let order2021 = element.order;
-    let order2020 = element.order2020;
+    let order2020 = element.order20;
 
     let mark2021 = element.mark;
-    let mark2020 = element.mark2020;
+    let mark2020 = element.mark20;
 
     let quota = element.quota; 
     let settlers = element.settlers; 
