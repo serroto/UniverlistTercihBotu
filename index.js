@@ -99,7 +99,7 @@ function onSuccessRes(jsonReturn){
                     <!-- Taban Puan 2021 -->
                     <td style="list-style: none;text-align: center; font-size: 11px !important;"><label>${mark2021?.toFixed(2)}</label></td>
                     <!-- Taban Puan 2020 -->
-                    <td style="list-style: none;text-align: center;"><label>${mark2020}</label></td>
+                    <td style="list-style: none;text-align: center;"><label>${mark2020.toFixed(2)}</label></td>
                     <!-- Başarı Sırası 2021 -->
                     <td style="list-style: none;text-align: center;"><label>${order2021}</label></td>
                     <!-- Başarı Sırası 2020 -->
